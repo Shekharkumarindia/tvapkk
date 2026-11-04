@@ -2,12 +2,14 @@
 title = NokiaTV
 package.name = nokiatv
 package.domain = org.nokia.tv
+
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
+source.include_patterns = assets/*,images/*
+
 version = 1.0
-version.regex = __version__ = ['"]([^'"]*)['"]
-version.filename = %(source.dir)s/main.py
 requirements = python3,kivy
+
 orientation = portrait
 fullscreen = 0
 
@@ -20,4 +22,5 @@ android.minapi = 21
 android.ndk = 25b
 android.sdk = 33
 android.accept_sdk_license_agreement = True
+android.archs = arm64-v8a, armeabi-v7a
 android.permissions = INTERNET,ACCESS_NETWORK_STATE
